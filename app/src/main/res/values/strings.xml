@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Driver Asli Jempol</string>
+    <string name="title_home">Beranda</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="facebook_app_id">205352450150568</string>
+    <string name="fb_login_protocol_scheme">fb205352450150568</string>
+
+    <string name="step_of">Step %1$d of %2$d</string>
+    <string name="section_format">Section : %1$d</string>
+
+    <string name="about_text">The best android implementation of material UI components. This app implemented based on Google Design Guidelines.
+    </string>
+
+    <!--Welcome slider-->
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GO!</string>
+
+    <string name="slide_1_title">Title 1</string>
+    <string name="slide_1_desc">Desciption 1</string>
+
+    <string name="slide_2_title">Title 2</string>
+    <string name="slide_2_desc">Description 2</string>
+
+    <string name="slide_3_title">Title 3</string>
+    <string name="slide_3_desc">Description 3</string>
+
+    <string name="slide_4_title">Title 4</string>
+    <string name="slide_4_desc">Description 4</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="welcome">Selamat Datang,</string>
+    <string name="jemput">Jemput</string>
+    <string name="antar">Antar</string>
+    <string name="welcome_back">Berjumpa lagi,</string>
+    <string name="sign_in_to_continue">Login untuk melanjutkan</string>
+    <string name="password">Kata Sandi</string>
+    <string name="username">Nama User</string>
+    <string name="my_pickup">Jemputan Ku</string>
+    <string name="my_delivery">Antaran Ku</string>
+    <string name="maps">Peta Lokasi</string>
+</resources>

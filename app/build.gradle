@@ -1,0 +1,78 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'keyaccess2'
+            keyPassword 'b1a9g9u5s'
+            storeFile file('C:/Users/Bagus/androidkeys.jks')
+            storePassword 'b1a9g9u5s'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
+    defaultConfig {
+        applicationId "laundry.driveraslijempol"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 2
+        versionName "1.01"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                onesignal_app_id               : 'c6cf9e2a-514b-4ec1-8f34-51a6fa20bf64',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-vector-drawable:27.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // google support library ---------------------------------------------------------------------
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:design:27.0.2'
+    compile 'com.android.support:cardview-v7:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile 'com.android.support:support-v4:27.0.2'
+    compile 'com.android.support:support-v13:27.0.2'
+    implementation 'com.android.support:support-vector-drawable:27.0.2'
+    // third party dependencies -------------------------------------------------------------------
+    compile 'com.balysv:material-ripple:1.0.2'
+    // ripple effect
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // image loader
+    compile 'com.android.volley:volley:1.1.1'
+    // google maps library ------------------------------------------------------------------------
+    compile 'com.google.android.gms:play-services-maps:11.8.0'
+    compile 'com.google.android.gms:play-services-places:11.8.0'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
+    // google gson --------------------------------------------------------------------------------
+    compile 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+}

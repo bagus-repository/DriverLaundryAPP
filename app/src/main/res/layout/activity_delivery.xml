@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Login progress -->
+
+        <ScrollView
+            android:id="@+id/pembayaran_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Order details"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:stretchColumns="0"
+                        android:layout_marginTop="@dimen/spacing_large">
+                        <TableRow>
+                            <TextView
+                                android:text="Nama"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtNama"
+                                android:text="{nama}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Alamat"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtAlamat"
+                                android:text="{alamat}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Tanggal Pickup"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtTglPickup"
+                                android:text="{Tgl_pickup}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Jenis Service"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtJenisService"
+                                android:text="{Service}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Berat"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtBerat"
+                                android:text="{Berat}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Biaya Tambahan"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtBiayaTambahan"
+                                android:text="{Biaya Tambahan}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Kode Voucher"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtKodeVoucher"
+                                android:text="{Kode Voucher}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Total"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtTotal"
+                                android:text="{Total}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Potongan"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtPotongan"
+                                android:text="{Potongan}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="Harus Dibayar"
+                                android:layout_column="0"
+                                android:layout_width="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:text=":"
+                                android:gravity="center"
+                                android:layout_column="1"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5" />
+                            <TextView
+                                android:id="@+id/txtBayar"
+                                android:text="{Bayar}"
+                                android:layout_column="2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5" />
+                        </TableRow>
+                    </TableLayout>
+                    <TextView
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Bayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/viewBayar"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Rp. 0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Kembali"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/viewKembali"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Rp. 0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/inputBayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bayar"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/btnBayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rounded_accent"
+                        android:text="Bayar"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
